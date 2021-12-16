@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+}
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--Light-gray);
+}
+
+.container{
+    margin: 70px 20px;
+}
+
+.content{
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.daniel{
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: var(--Light-gray);
+}
+
+h4{
+    opacity: 0.5;
+}
+
+p{
+    opacity: 0.7;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.daniel p{
+    margin-bottom: 10px;
+    padding-right: 48px;
+}
+
+h2{
+    margin: 15px 0;
+    font-size: 1.3rem;
+    padding-right: 23px;
+}
+
+.jonathan{
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--Light-gray);
+}
+
+.jonathan p{
+    padding-right: 20px;
+}
+
+.jeanette, .kira{
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+
+.jeanette p{
+    padding-right: 30px;
+}
+
+.patrick{
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--Light-gray);
+}
+
+.patrick p{
+    padding-right: 33px;
+}
+
+.kira p{
+    padding-right: 34px;
+}
+.header{
+    display: flex;
+}
+
+.header img{
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.daniel img, .patrick img{
+    border: 2px solid var(--Moderate-violet);
+}
+
+@media(min-width:1000px){
+    .content{
+        margin: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.5em;
+        margin: 100px 130px;
+    }
+
+    .daniel{
+        order: 1;
+        grid-column: 1/3;
+    }
+
+    .jonathan{
+        order: 2;
+    }
+
+    .kira{
+        order: 3;
+        grid-column: 4/5;
+        grid-row: 1/3;
+        
+    }
+
+    .jeanette{
+        order: 4;
+    }
+
+    .patrick{
+        order: 5;
+        grid-column: 2/4;
+    }
+
+
+}
